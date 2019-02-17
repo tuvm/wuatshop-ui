@@ -1,0 +1,79 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+/*==================
+	SLIDER SECTION
+====================*/
+#aa-slider{
+	float: left;
+	display: inline;
+	width: 100%;
+
+	.aa-slider-area{
+		display: inline;
+		float: left;
+        width: 100%;
+        .seq-model{
+            img{
+                height: 900px;
+            }
+        }
+		.seq-title{
+			left: 19%;
+			margin-right: 0;
+			position: absolute;
+			top: 30%;
+			width: 57%;
+			text-align: center;
+			span{
+				background-color: #fff;
+				color: $theme-color;
+				display: inline-block;
+				padding: 6px 15px;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;			
+				margin-bottom: 10px;
+			}
+			h2{	
+				background-color: rgba(255,255,255,0.6);
+				color: #333;
+				display: inline-block;
+				float: none;
+				font-size: 50px;
+				font-family: $heading-font;
+				font-weight: bold;
+				margin-top: 20px;
+				text-align: center;
+				text-transform: uppercase;
+				width: 100%;
+			}
+			p{
+				color: #fff;
+				display: block;
+				text-align: center;
+				letter-spacing: 0.5px;
+			}
+			.aa-shop-now-btn{
+				margin-top: 25px;
+			}
+		}
+		.seq{
+			.seq-next{
+				@include transition(all 0.5s);
+				&:hover, &:focus{
+					border: 1px solid #f9f9f9;
+					background-color: $theme-color;	
+					color: #fff;				
+				}
+			}
+			.seq-prev{
+				@include transition(all 0.5s);
+				&:hover, &:focus{
+					border: 1px solid #f9f9f9;
+					background-color: $theme-color;	
+					color: #fff;				
+				}
+			}
+		}		
+	}
+}

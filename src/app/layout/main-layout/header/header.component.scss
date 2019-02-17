@@ -1,0 +1,24 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+#aa-header {	
+	width: 100%;
+	height: 100px;
+	.aa-header-bottom {
+		width: 100%;
+		.aa-header-bottom-area {
+			width: 100%;
+			.aa-logo {	
+				img {
+					position: absolute;
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+					border: $theme-color solid 3px;
+					z-index: 99;
+				}
+			}
+		}
+		position: relative;
+	}
+}
