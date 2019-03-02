@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractComponent } from 'src/app/common/abstract.component';
+import { AbstractComponent } from 'src/app/common/component/abstract.component';
 
 @Component({
   selector: 'app-menu',

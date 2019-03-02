@@ -1,21 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from 'src/app/main/main.component';
-import { ContactComponent } from 'src/app/main/contact/contact.component';
-import { SliderComponent } from './slider/slider.component';
-import { DynamicScriptLoaderService } from 'src/app/common/dynamic-script-loader.service';
+import { DynamicScriptLoaderService } from 'src/app/common/service/dynamic-script-loader.service';
+import { MainLayoutComponent } from './main-layout.component';
+import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-    { path: '', component: MainComponent },
-    { path: 'contact', component: ContactComponent }
+  { path: '', component: MainLayoutComponent, loadChildren: '../../main/main.module#MainModule' },
 ]
 
 @NgModule({
   declarations: [
-    MainComponent,
-    ContactComponent,
-    SliderComponent
+    MainLayoutComponent,
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     RouterModule.forChild(routes)

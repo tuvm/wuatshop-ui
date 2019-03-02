@@ -1,9 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { CommonModule as AngularCommonModule } from '@angular/common';
-import { AbstractComponent } from './abstract.component';
+import { AbstractService } from './service/abstract.service';
 
 @NgModule({
   declarations: [
@@ -11,7 +9,12 @@ import { AbstractComponent } from './abstract.component';
   imports: [
     AngularCommonModule
   ],
-  providers: [],
+  providers: [
+    AbstractService
+  ],
+  exports: [
+    AngularCommonModule
+  ],
   bootstrap: []
 })
 export class CommonModule { }

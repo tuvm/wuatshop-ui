@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractComponent } from 'src/app/common/abstract.component';
-import { DynamicScriptLoaderService } from 'src/app/common/dynamic-script-loader.service';
+import { AbstractComponent } from 'src/app/common/component/abstract.component';
+import { DynamicScriptLoaderService } from 'src/app/common/service/dynamic-script-loader.service';
 
 @Component({
   selector: 'app-slider',

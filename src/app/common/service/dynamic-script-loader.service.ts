@@ -7,7 +7,9 @@ interface Scripts {
 
 export const ScriptStore: Scripts[] = [
   { name: 'sequence', src: '../../assets/js/sequence.js' },
-  { name: 'sequence-theme.modern-slide-in', src: '../../assets/js/sequence-theme.modern-slide-in.js' }
+  { name: 'sequence-theme.modern-slide-in', src: '../../assets/js/sequence-theme.modern-slide-in.js' },
+  { name: 'jquery.simpleGallery', src: '../../assets/js/jquery.simpleGallery.js' },
+  { name: 'jquery.simpleLens', src: '../../assets/js/jquery.simpleLens.js' }
 ];
 
 declare var document: any;

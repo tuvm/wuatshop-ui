@@ -1,0 +1,340 @@
+@import 'src/assets/scss/_variables';
+@import 'src/assets/scss/_mixins';
+
+/*==================
+	PRODUCT SECTION
+====================*/
+#aa-product{
+	display: inline;
+	float: left;
+	width: 100%;
+	.aa-product-area{
+		display: inline;
+		float: left;
+		width: 100%;
+		// padding: 30px 0;			
+
+		.aa-product-inner{
+			display: inline;
+			float: left;
+			width: 100%;
+			.aa-product-catg{
+				float: left;
+			}
+			
+			#men{
+				text-align: center;
+				padding-bottom: 35px;	
+			}
+			#electronics{
+				text-align: center;
+				padding-bottom: 35px;		
+			}
+			#women{
+				text-align: center;
+				padding-bottom: 35px;			
+			}
+			
+		}
+	}
+}
+.aa-product-nav{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	li{
+		display: inline-block;
+		a{	
+			color: #333;
+			display: inline-block;
+			padding: 8px 15px;
+		}
+	}
+}
+.aa-product-content{				
+	margin-left: -30px;
+	margin-top: 20px;
+	li{
+		background-color: #ccc;
+		display: block;
+		float: left;
+		height: 250px;
+		margin: 0 0 0 30px;
+		width: 22.5%;
+		margin-bottom: 20px;
+	}
+}
+.aa-products-tab{
+	display: block;
+	text-align: center;
+	border: none;
+	margin-bottom: 20px;
+	li{
+		border: none;
+		float: none;
+		display: inline-block;
+		a{	
+			border: none;
+			font-size: 16px;
+			text-transform: uppercase;
+			border-radius: 0;
+			border-bottom: 1px solid #fff;
+			margin: 0 6px;
+			padding: 10px 12px;
+			@include transition(all 0.5s);
+			&:hover,
+			&:focus{
+				color: #333;
+				background-color: inherit;
+				border-bottom: 1px solid $theme-color;
+			}
+		}					
+	}
+	li.active{					
+		a{
+			border: none;
+			background-color: inherit;
+			border-bottom: 1px solid $theme-color;
+			font-size: 16px;
+			&:hover,
+			&:focus{
+			border: none;
+			background-color: inherit;
+			border-bottom: 1px solid $theme-color;			
+			}
+		}
+
+	}
+}			
+.aa-product-catg{
+	margin-left: -54px;			
+	li{
+		display: block;
+		float: left;
+		height: 380px;					
+		text-align: center;
+		margin: 0 0 20px 55px;
+		width: 20.5%;
+		position: relative;	
+		overflow: hidden;
+		&:hover{						
+			figure{
+				.aa-product-img{
+					background-color: rgba(0,0,0,0.5);
+				}
+				.aa-add-card-btn{
+					@include transform(scale(1));
+				}
+			} 
+			.aa-product-hvr-content{						
+				@include transform(translateX(0%));
+			}
+
+		}				
+		figure{
+			position: relative;
+			height: 300px;
+			.aa-product-img{
+				background-color: #f9f9fb;
+				display: block;
+				@include transition(all 0.5s);
+		
+			}
+			.aa-add-card-btn{
+				background: #000 none repeat scroll 0 0;
+				bottom: 0;
+				color: #fff;
+				font-size: 16px;
+				font-weight: bold;
+				left: 0;
+				padding: 12px 10px;
+				position: absolute;
+				right: 0;
+				text-transform: uppercase;
+				@include transition(all 0.5s);
+				@include transform(scale(0));
+				span{
+					margin-right: 5px;
+				}
+				&:hover{
+					color: $theme-color;
+				}
+			}
+		}
+		
+		.aa-product-title{
+			color: #333;
+			margin-bottom: 5px;						
+			a{
+				color: #333;
+				@include transition(all 0.5s);
+				&:hover,
+				&:focus{
+					color: $theme-color;
+				}
+			}
+		}				
+		.aa-product-price{
+			color: $theme-color;
+			font-weight: bold;
+			letter-spacing: 0.5px;
+			font-size: 16px;
+			del{
+				margin-left: 5px;
+			}
+		}
+		.aa-product-hvr-content{
+			left: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 50%;
+			width: 100%;
+			@include transition(all 0.5s);
+			@include transform(translateX(-100%));
+
+			a{
+				background: #fff none repeat scroll 0 0;
+				display: inline-block;
+				margin: 0 5px;
+				padding: 5px 10px;
+				&:hover,
+				&:focus{
+					color: $theme-color;
+				}
+			}
+		}
+		.aa-badge{
+			position: absolute;
+			top: 5%;
+			left: 0;
+			padding: 5px 10px;			
+			color: #fff;
+			font-size: 15px;
+		}	
+		.aa-sale{
+			background-color: #008000;
+		}
+		.aa-sold-out{
+			background-color: #FF0000;	
+		}
+		.aa-hot{
+			background-color: #ff6600;	
+		}
+	}
+}
+
+/*=== modal window ===*/ 
+
+#quick-view-modal{
+	// overflow: hidden;
+	.modal-dialog {
+	  margin: 10% auto;
+	  width: 800px;
+	}
+	.modal-content{
+		button.close {					 
+		  margin-right: 10px;
+		  @include transition(all 0.5s);
+		  &:hover{
+		  	color: $theme-color;
+		  	opacity: 1;
+		  }
+		}
+		border-radius: 0;
+		.aa-product-view-slider{
+			// background-color: #ccc;
+			.simpleLens-container {						
+			  width: 100%;
+			  .simpleLens-big-image-container{
+			  	width: 100%;
+				.simpleLens-lens-image{
+					width: 100%;
+				}
+			  }
+			}	
+			.simpleLens-thumbnails-container{
+				text-align: center;
+			}
+		}
+		.aa-product-view-content{
+			padding-right: 10px;
+			padding-bottom: 10px;
+			h3{
+				font-weight: bold;
+				margin-top: 0px;
+				margin-bottom: 5px;
+			}
+			h4{
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+			&>p{
+				font-size: 15px;
+				letter-spacing: 0.5px;
+				margin-bottom: 14px;
+			}
+			.aa-price-block{
+				position: relative;
+				margin-bottom: 5px;
+				.aa-product-view-price{
+					font-size: 18px;
+				}
+				.aa-product-avilability{
+					position: absolute;
+					right: 0;
+					top: 0;
+					span{
+						color: $theme-color;
+					}
+				}
+
+			}
+			.aa-prod-view-size{
+				a{
+					border: 1px solid #ddd;
+					display: inline-block;
+					font-size: 14px;
+					letter-spacing: 0.5px;
+					margin-bottom: 5px;
+					margin-right: 8px;
+					padding: 5px 10px;
+					@include transition(all 0.5s);
+					&:hover,
+					&:focus{
+						border-color: $theme-color;
+						color: $theme-color;
+					}
+				}
+			}
+			.aa-prod-quantity{
+				margin-top: 10px;
+				form{
+					display: inline-block;
+					select{
+						height: 25px;
+						width: 40px;
+					}
+				}
+				.aa-prod-category{
+					display: inline-block;
+					margin-left: 15px;
+
+					a{
+						color: $theme-color;
+						font-size: 14px;									
+					}
+				}
+			}
+			.aa-prod-view-bottom{
+				border-top: 1px solid #ddd;
+				margin-top: 10px;
+				padding-top: 10px;
+				a:last-child{
+					margin-left: 10px;
+				}
+			}
+		}
+
+	}
+}

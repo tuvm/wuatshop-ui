@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AbstractComponent } from 'src/app/common/abstract.component';
 
 @Component({
   selector: 'app-header',
