@@ -19,6 +19,10 @@ import { AbstractService } from './common/service/abstract.service';
       {
         path: '', component: AppComponent,
         loadChildren: './layout/main-layout/main-layout.module#MainLayoutModule'
+      },
+      {
+        path: 'admin', component: AppComponent,
+        loadChildren: './layout/admin-layout/admin-layout.module#AdminLayoutModule'
       }
     ])
   ],

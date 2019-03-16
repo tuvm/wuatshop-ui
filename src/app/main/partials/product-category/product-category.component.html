@@ -25,7 +25,7 @@
                           <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                             <figcaption>
                             <h4 class="aa-product-title"><a href="#">{{ product.name }}</a></h4>
-                            <span class="aa-product-price">{{ product.promote_price }}đ</span><span class="aa-product-price"><del>{{ product.price }}đ</del></span>
+                            <span class="aa-product-price">{{ product.promote_price | number }}đ</span><span class="aa-product-price"><del>{{ product.price | number }}đ</del></span>
                           </figcaption>
                         </figure>                        
                         <div class="aa-product-hvr-content">

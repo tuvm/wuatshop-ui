@@ -22,6 +22,7 @@ export class ProductCategoryComponent extends AbstractComponent implements OnIni
 
   ngOnInit() {
     this.getByGender();
+    this.loadScripts();
   }
 
   public getByGender() {

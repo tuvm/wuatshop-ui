@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractComponent } from 'src/app/common/component/abstract.component';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'main-menu',
   templateUrl: 'menu.component.html',
   styleUrls: ['menu.component.scss']
 })
