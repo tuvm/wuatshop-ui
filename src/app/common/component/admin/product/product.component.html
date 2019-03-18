@@ -1,0 +1,64 @@
+<div class="product-view card card-body bg-light">
+  <div class="product-item row">
+    <img src="" alt="" class="card-img-top">
+    <div class="product-name">{{product?.name}}</div>
+    <div class="product-category">{{product?.category}}</div>
+    <div class="product-brand">{{product?.brand}}</div>
+    <div class="product-badge">{{product?.badge}}</div>
+    <div class="product-images">
+      <div *ngFor="let image of product.images" class="prd-img">
+        <img src="image.src" alt="image.name">
+      </div>
+    </div>
+    <div class="button">
+      <a href="#" class="edit btn btn-outline-primary" data-toggle="collapse" data-target="#collapseExample">Edit</a>
+      <a href="#" class="delete btn btn-outline-danger">Delete</a>
+    </div>
+  </div>
+
+  <div class="row collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Product name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Category</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Brand</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Badge</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+    </div>
+
+  </div>
+</div>
