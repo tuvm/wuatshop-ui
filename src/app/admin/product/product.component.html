@@ -1,1 +1,43 @@
-<div>product</div>
+<div class="container-fluid product-management">
+  <div class="row header">
+    <h4>Product Management</h4>
+  </div>
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Main Image</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Brand</th>
+        <th>Badge</th>
+        <th>Detail images</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td>
+          <img src="{{product?.image}}" alt="main-image" class="main-image">
+        </td>
+        <td>
+          <div class="product-name">{{product?.name}}</div>
+        </td>
+        <td>
+          <div class="product-category">{{product?.gender?.name}}</div>
+        </td>
+        <td>
+          <div class="product-brand">{{product?.brand?.name}}</div>
+        </td>
+        <td>
+          <div class="product-badge">{{product?.badge?.name}}</div>
+        </td>
+        <td>
+          <div class="product-images">
+            <div *ngFor="let image of product.images" class="prd-img">
+              <img src="{{image.normal}}" alt="image{{image.id}}">
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

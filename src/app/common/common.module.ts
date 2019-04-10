@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 
 import { CommonModule as AngularCommonModule } from '@angular/common';
 import { AbstractService } from './service/abstract.service';
-import { ProductComponent } from './component/admin/product/product.component';
 
 @NgModule({
-  declarations: [
-    ProductComponent
-  ],
+  declarations: [],
   imports: [
     AngularCommonModule
   ],
@@ -15,8 +12,7 @@ import { ProductComponent } from './component/admin/product/product.component';
     AbstractService
   ],
   exports: [
-    AngularCommonModule,
-    ProductComponent
+    AngularCommonModule
   ],
   bootstrap: []
 })

@@ -5,7 +5,7 @@ import { AbstractService } from 'src/app/common/service/abstract.service';
 export class ProductService extends AbstractService {
 
   public getByGender() {
-      return this.get('products/gender/2');
+      return this.get('public/products/gender/2');
   }
 
 }
