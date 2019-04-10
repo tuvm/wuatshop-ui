@@ -5,5 +5,16 @@ import { Component } from '@angular/core';
   styleUrls: ['admin.component.scss']
 })
 export class AdminComponent {
-  title = 'wuat-shop';
+  product = {
+    name: 'example',
+    badge: 'hot',
+    brand: 'adidas',
+    category: 'men',
+    image: [
+      {
+        src: 'example.com',
+        name: 'image-name'
+      }
+    ]
+  }
 }

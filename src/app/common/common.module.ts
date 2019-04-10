@@ -4,8 +4,7 @@ import { CommonModule as AngularCommonModule } from '@angular/common';
 import { AbstractService } from './service/abstract.service';
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     AngularCommonModule
   ],

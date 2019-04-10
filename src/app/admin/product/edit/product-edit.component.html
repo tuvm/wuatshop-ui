@@ -1,0 +1,49 @@
+<div class="container-fluid product-edit">
+  <div class="row header">
+    <h4>Product Edit</h4>
+  </div>
+  <div class="form">
+    <div class="row">
+      <div class="input-group col-md-6">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Product name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1" value="{{product?.name}}">
+      </div>
+      <div class="input-group col-md-6">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Category</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <ng-container *ngFor="let gender of genderList">
+            <option value="gender.id" [selected]="product?.gender?.id == gender.id">{{gender.name}}</option>
+          </ng-container>
+        </select>
+      </div>
+      <div class="input-group col-md-6">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Brand</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <ng-container *ngFor="let brand of brandList">
+            <option value="brand.id" [selected]="product?.brand?.id == brand.id">{{brand.name}}</option>
+          </ng-container>
+        </select>
+      </div>
+      <div class="input-group col-md-6">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Badge</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <ng-container *ngFor="let badge of badgeList">
+            <option value="badge.id" [selected]="product?.badge?.id == badge.id">{{badge.name}}</option>
+          </ng-container>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

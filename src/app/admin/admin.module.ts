@@ -7,16 +7,20 @@ import { DynamicScriptLoaderService } from 'src/app/common/service/dynamic-scrip
 import { CommonModule } from '../common/common.module';
 import { AdminComponent } from './admin.component';
 import { ProductComponent } from './product/product.component';
+import { ProductService } from './product/product.service';
+import { ProductEditComponent } from './product/edit/product-edit.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
-  { path: 'product', component: ProductComponent }
+  { path: 'product', component: ProductComponent },
+  { path: 'product/:id/edit', component: ProductEditComponent }
 ]
 
 @NgModule({
   declarations: [
     AdminComponent,
-    ProductComponent
+    ProductComponent,
+    ProductEditComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +29,7 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [],
   schemas: []
 })
