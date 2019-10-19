@@ -29,24 +29,12 @@
             "styles": [
               "src/assets/css/font-awesome.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/jquery.smartmenus.bootstrap.css",
-              "src/assets/css/jquery.simpleLens.css",
-              "src/assets/css/slick.css",
-              "src/assets/css/nouislider.css",
-              "src/assets/css/sequence-theme.modern-slide-in.css",
               "src/assets/scss/styles.scss"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/jquery.smartmenus.js",
-              "src/assets/js/jquery.smartmenus.bootstrap.js",
-              "src/assets/js/sequence.js",
-              "src/assets/js/jquery.simpleGallery.js",
-              "src/assets/js/jquery.simpleLens.js",
-              "src/assets/js/slick.js",
-              "src/assets/js/nouislider.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/jstree.min.js"
             ]
           },
           "configurations": {

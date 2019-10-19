@@ -1,0 +1,28 @@
+<div style="height:81vh;width: 250px; background-color:#ECF0F5;border-right: 2px solid gray; padding: 10px;">
+  <div style="display: flex; justify-content: center; padding: 10px;">
+    Location {{productList[0].area}}
+  </div>
+  <div id="jstree" style = "padding-top: 20px;padding-bottom: 20px; background-color:white; border-radius: 10px; border: 2px solid gray">
+      <app-sidebar [sidebarData]="productList"></app-sidebar>
+      <ul>
+          <li>Root node 1
+            <div id="jstree" >
+                  <ul>
+                      <li>Root node 1
+                        <ul>
+                          <li id="child_node_1">Child node 1</li>
+                          <li>Child node 2</li>
+                        </ul>
+                      </li>
+                      <li>Root node 2</li>
+                    </ul>
+              </div>
+            <ul>
+              <li id="child_node_1">Child node 1</li>
+              <li>Child node 2</li>
+            </ul>
+          </li>
+          <li>Root node 2</li>
+        </ul>
+  </div>
+</div>

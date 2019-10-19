@@ -1,24 +1,80 @@
 @import 'src/assets/scss/_variables';
 @import 'src/assets/scss/_mixins';
 
-#aa-header {	
-	width: 100%;
-	height: 100px;
-	.aa-header-bottom {
-		width: 100%;
-		.aa-header-bottom-area {
-			width: 100%;
-			.aa-logo {	
-				img {
-					position: absolute;
-					width: 100px;
-					height: 100px;
-					border-radius: 50%;
-					border: $theme-color solid 3px;
-					z-index: 99;
-				}
+.navbar-dark {
+	background-color: #2e353d;
+	.navbar-brand {
+		width: 300px;
+		text-align: center;
+	}
+}
+
+@media (min-width: 992px) {
+	.navbar-dark {
+		padding-left: 0;
+		.container {
+			margin-left: 0;
+			padding: 0;
+			.collapse.navbar-collapse {
+				position: absolute;
+				margin-left: 300px;
 			}
 		}
-		position: relative;
 	}
+}
+
+.nav ul > li a:hover{
+	color: red;
+	background: green;
+}
+
+
+.sidebar-nav {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	list-style-type: none;
+	color: #e1ffff;
+}
+
+.sidebar-nav li {
+	display: inline-block;
+	line-height: 1.5;
+	color: #e1ffff;
+}
+
+.sidebar-nav li a{
+	display: inline-block;
+	text-decoration: none;
+	color: #e1ffff;
+	text-align: center;
+	padding: 14px 16px;
+	
+}
+
+.sidebar-nav li h3{
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	padding: 14px 16px;
+	margin: 0;
+	color: #4B646F;
+	background-color: #1A2226;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active{
+	color: #fff;
+	background-color: #4f5b69;
+}
+
+.active a{
+	color: #fff;
+	padding: 0 0 0 13px;
+	background-color: #4f5b69;
+}
+
+.active a:hover{
+	color: #fff;
+	background-color: #4f5b69;
 }

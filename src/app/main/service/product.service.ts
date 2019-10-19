@@ -8,4 +8,8 @@ export class ProductService extends AbstractService {
       return this.get('public/products/gender/2');
   }
 
+  public getdata() {
+    return this.get('public/getdata');
+}
+
 }

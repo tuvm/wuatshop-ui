@@ -1,0 +1,17 @@
+<!-- <ul>
+    <ng-container *ngFor="let item of sidebarData">
+      <li>
+        {{item.area}}
+        <app-sidebar *ngIf="item?.child && item.child.length > 0" [level]="level+1" [sidebarData]="item.child"></app-sidebar>
+      </li>
+    </ng-container>
+</ul> -->
+<ul>
+  <li>Root node 1
+    <ul>
+      <li id="child_node_1">Child node 1</li>
+      <li>Child node 2</li>
+    </ul>
+  </li>
+  <li>Root node 2</li>
+</ul>

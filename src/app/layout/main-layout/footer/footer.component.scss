@@ -4,14 +4,14 @@
 @import 'src/assets/scss/_mixins';
 
 #aa-footer{
-	background-color: #222;
+	background-color: #2e353d;
 	display: inline;
 	float: left;	
 	width: 100%;
 	.aa-footer-top{
 		display: inline;		
 		float: left;
-		padding: 50px 0;
+		padding: 20px 0;
 		width: 100%;
 		min-height: 100px;
 		.aa-footer-top-area{
@@ -44,37 +44,27 @@
 						}
 					}
 				}
-				.aa-footer-social{
-					a{
-						border: 1px solid #888;
-						color: #888;
-						display: inline-block;
-						font-size: 18px;
-						margin-right: 8px;
-						padding: 2px 0;
-						text-align: center;						
-						width: 35px;
-						@include transition(all 0.5s);
-						&:hover{
-							color: #fff;
-							border-color: #fff;
-						}
-					}
-				}
 			}
 		}	
 	}
 	.aa-footer-bottom{
 		border-top: 1px solid #333;
-		display: inline;
+		display: flex;
+		justify-content: space-between;
 		float: left;
 		padding: 15px 0;
 		width: 100%;
 		.aa-footer-bottom-area{
-			display: inline;
+			display: flex;
+			justify-content: space-between;
 			float: left;
 			width: 100%;
-			&>p{
+			.div {
+				display: flex;
+				flex-direction: column;
+				float: right;
+			}
+			p {
 				color: #888;
 				display: inline-block;
 				float: left;
@@ -91,13 +81,21 @@
 					}
 				}
 			}
-			.aa-footer-payment{
+			.aa-footer-social{
 				float: right;
-				span{
+				a{
+					border: 1px solid #888;
 					color: #888;
-					margin-left: 8px;
+					display: inline-block;
+					font-size: 18px;
+					margin-right: 8px;
+					padding: 2px 0;
+					text-align: center;						
+					width: 35px;
+					@include transition(all 0.5s);
 					&:hover{
 						color: #fff;
+						border-color: #fff;
 					}
 				}
 			}
